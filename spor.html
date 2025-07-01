@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spor Haberleri | Haber Sitesi</title>
+  <style>
+    :root {
+      --bg-dark: #1f1f1f;
+      --accent: #ff6f61;
+      --text-light: #e0e0e0;
+      --card-bg: #2a2a2a;
+      --shadow: rgba(0,0,0,0.4);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--bg-dark);
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      position: relative;
+      transition: color .3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: var(--accent);
+      transition: width .3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px var(--shadow);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h2 {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .card-content p {
+      margin-bottom: .75rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Spor</h1>
+    <nav>
+      <a href="hindex.html">Genel</a>
+      <a href="teknoloji.html">Teknoloji</a>
+      <a href="siyaset.html">Siyaset</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="spor.html">Spor</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="news-grid">
+      <!-- 1 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor1/400/200" alt="Galatasaray Şampiyonlar Ligi">
+        <div class="card-content">
+          <h2>Galatasaray Şampiyonlar Ligi’ne Hazırlanıyor</h2>
+          <p>Galatasaray, yeni transferlerle birlikte Şampiyonlar Ligi grup aşamasına hazırlanıyor. Teknik direktörün rotasyon planı ve tesis çalışmaları sürüyor.</p>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor2/400/200" alt="EURO 2025 Kadrosu">
+        <div class="card-content">
+          <h2>EURO 2025 Aday Kadrosu Açıklandı</h2>
+          <p>2025 Avrupa Şampiyonası aday kadrosu duyuruldu. Tecrübeli savunma hattı ve genç hücum oyuncuları bir arada yer alıyor.</p>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor3/400/200" alt="Fenerbahçe Lider">
+        <div class="card-content">
+          <h2>Fenerbahçe Süper Lig Liderliğini Sürdürüyor</h2>
+          <p>Fenerbahçe, bu hafta oynadığı maçta kritik bir galibiyet alarak puanını 58’e yükseltti ve zirvedeki yerini korudu.</p>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor4/400/200" alt="Voleybol Avrupa Şampiyonası">
+        <div class="card-content">
+          <h2>Voleybol Milli Takım Avrupa Şampiyonası’nda</h2>
+          <p>Milliler, grup aşamasını 2 galibiyetle tamamlayarak çeyrek finale yükseldi. Rakipler arasında Sırbistan ve Polonya bulunuyor.</p>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor5/400/200" alt="NBA Yaz Ligi">
+        <div class="card-content">
+          <h2>NBA Yaz Ligi Başladı</h2>
+          <p>Genç yetenekler ve draft adayı oyuncular, Summer League turnuvasında kendilerini gösteriyor. İlk maçta sürpriz sonuçlar alındı.</p>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor6/400/200" alt="Wimbledon Çeyrek Final">
+        <div class="card-content">
+          <h2>Wimbledon Çeyrek Finalistleri Belli Oldu</h2>
+          <p>Karışık hava koşullarına rağmen turnuvada 8 erkek ve 8 kadın çeyrek finalist netleşti. Favori isimler başarılarını sürdürdü.</p>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor7/400/200" alt="İstanbul Maratonu">
+        <div class="card-content">
+          <h2>İstanbul Maratonu Tarihi Açıklandı</h2>
+          <p>Bu yıl 43. İstanbul Maratonu, 12 Ekim 2025 tarihinde düzenlenecek. Rekor katılım öngörülüyor, parkur güzergahında yenilikler var.</p>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor8/400/200" alt="Dünya Rallisi Türkiye">
+        <div class="card-content">
+          <h2>Dünya Rallisi Türkiye Etabı Başlıyor</h2>
+          <p>Türkiye Rallisi, WRC takvimindeki yerini koruyor. Zorlu coğrafyada mücadele edecek pilotlar arasında yerli isimler de bulunuyor.</p>
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor9/400/200" alt="Rugby Turnuvası">
+        <div class="card-content">
+          <h2>Rugby Milli Takım Avrupa Turnuvasında</h2>
+          <p>Türkiye Rugby takımı ilk kez Avrupa İkinci Lig’e yükseldi. Rakipler arasında Estonya ve İzlanda yer alıyor.</p>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/spor10/400/200" alt="Yüzme Antrenman Programı">
+        <div class="card-content">
+          <h2>Yüzme Federasyonu Yeni Antrenman Programı Açıkladı</h2>
+          <p>Milli sporcular için haftalık antrenman ve fiziksel hazırlık programı revize edildi. Yaz kampı ve uluslararası hazırlık müsabakaları planlandı.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Haber Sitesi
+  </footer>
+
+</body>
+</html>

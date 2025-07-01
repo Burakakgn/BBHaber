@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teknoloji Haberleri | Haber Sitesi</title>
+  <style>
+    :root {
+      --bg-dark: #1f1f1f;
+      --accent: #ff6f61;
+      --text-light: #e0e0e0;
+      --card-bg: #2a2a2a;
+      --shadow: rgba(0,0,0,0.4);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--bg-dark);
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      position: relative;
+      transition: color .3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: var(--accent);
+      transition: width .3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px var(--shadow);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h2 {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .card-content p {
+      margin-bottom: .75rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+    @media (max-width: 768px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Teknoloji</h1>
+    <nav>
+      <a href="hindex.html">Genel</a>
+      <a href="teknoloji.html">Teknoloji</a>
+      <a href="siyaset.html">Siyaset</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="spor.html">Spor</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="news-grid">
+      <!-- 1 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech1/400/200" alt="iOS 18 Beta 3">
+        <div class="card-content">
+          <h2>Apple iOS 18 Beta 3 Çıktı</h2>
+          <p>Yeni beta sürümü, Kontrol Merkezi iyileştirmeleri ve pil optimizasyonu vurgusuyla geliştiricilere açıldı.</p>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech2/400/200" alt="Google Yapay Zeka">
+        <div class="card-content">
+          <h2>Google’ın Yapay Zeka Modeli PaLM 3 Tanıtıldı</h2>
+          <p>PaLM 3, daha az enerji tüketimiyle çok modlu görevlerde üstün performans sergiliyor.</p>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech3/400/200" alt="Samsung Galaxy Z">
+        <div class="card-content">
+          <h2>Samsung Galaxy Z Fold 6 Sızıntıları Yayılmaya Başladı</h2>
+          <p>Menteşe tasarımında yenilik ve 7.6” dinamik AMOLED ekran detayları sızdırıldı.</p>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech4/400/200" alt="Meta VR Başlığı">
+        <div class="card-content">
+          <h2>Meta, Yeni VR Başlığını Duyurdu</h2>
+          <p>Meta Quest 3 Pro, ince form faktörü ve yerleşik el izleme özellikleriyle geliyor.</p>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech5/400/200" alt="Intel Core i9 15000">
+        <div class="card-content">
+          <h2>Intel Core i9-15000 Serisi Tanıtıldı</h2>
+          <p>15. nesil işlemciler, %15’e varan tek çekirdek performans artışı iddiasında.</p>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech6/400/200" alt="Tesla Otomatik Pilot">
+        <div class="card-content">
+          <h2>Tesla Otomatik Pilot Yazılım Güncellemesi</h2>
+          <p>Full Self-Driving 12.0, şehir içi kavşaklarda gelişmiş navigasyon desteği sunuyor.</p>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech7/400/200" alt="SpaceX Falcon Heavy">
+        <div class="card-content">
+          <h2>SpaceX Falcon Heavy Fırlatıldı</h2>
+          <p>Uydu takımyıldızı görevine ikinci kez başarıyla ulaşan Falcon Heavy, yeniden kullanılabilir roket rekoru kırdı.</p>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech8/400/200" alt="Microsoft Copilot">
+        <div class="card-content">
+          <h2>Microsoft Copilot Pro Genel Kullanıma Açıldı</h2>
+          <p>Copilot Pro, dökümantasyon üretimi ve sohbet tabanlı kod desteğiyle geliştirici akışını hızlandırıyor.</p>
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech9/400/200" alt="Amazon Prime Air">
+        <div class="card-content">
+          <h2>Amazon Prime Air Drone Hizmeti Test Aşamasında</h2>
+          <p>İngiltere’de başlayan test uçuşlarında 10 dakikada teslimat hedefi doğrulandı.</p>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/tech10/400/200" alt="Blockchain Enerji">
+        <div class="card-content">
+          <h2>Blockchain Tabanlı Enerji Ticaret Platformu Lansmanı</h2>
+          <p>Yerli girişim, güneş ve rüzgâr enerjisini P2P modelle alım-satıma açan sistemi devreye aldı.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Haber Sitesi
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ekonomi Haberleri | Haber Sitesi</title>
+  <style>
+    :root {
+      --bg-dark: #1f1f1f;
+      --accent: #ff6f61;
+      --text-light: #e0e0e0;
+      --card-bg: #2a2a2a;
+      --shadow: rgba(0,0,0,0.4);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--bg-dark);
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      position: relative;
+      transition: color .3s;
+    }
+    nav a.active,
+    nav a:hover {
+      color: var(--accent);
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: var(--accent);
+      transition: width .3s;
+    }
+    nav a.active::after,
+    nav a:hover::after {
+      width: 100%;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px var(--shadow);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h2 {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .card-content p {
+      margin-bottom: .75rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ekonomi</h1>
+    <nav>
+      <a href="hindex.html" class="nav-link">Genel</a>
+      <a href="teknoloji.html" class="nav-link">Teknoloji</a>
+      <a href="siyaset.html" class="nav-link">Siyaset</a>
+      <a href="ekonomi.html" class="nav-link">Ekonomi</a>
+      <a href="spor.html" class="nav-link">Spor</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="news-grid">
+      <!-- 1 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco1/400/200" alt="BIST 100 Rekor">
+        <div class="card-content">
+          <h2>BIST 100 Endeksi Rekor Seviyede</h2>
+          <p>Borsa İstanbul’un ana endeksi BIST 100, küresel piyasalardaki toparlanma ile tüm zamanların en yüksek seviyesine çıktı.</p>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco2/400/200" alt="Mayıs Enflasyonu">
+        <div class="card-content">
+          <h2>Mayıs Enflasyonu Beklentinin Altında</h2>
+          <p>TÜİK verilerine göre Mayıs TÜFE aylık %1,2; yıllık enflasyon ise %12,8 oldu. Piyasa beklentisi %1,5 ve %13,2’ydi.</p>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco3/400/200" alt="TCMB Faiz Kararı">
+        <div class="card-content">
+          <h2>TCMB Faiz Oranını Sabit Tuttu</h2>
+          <p>Merkez Bankası, politika faizini %19’da sabit bıraktı. Karar metninde ekonomik toparlanma ve jeopolitik riskler vurgulandı.</p>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco4/400/200" alt="Döviz Kurları">
+        <div class="card-content">
+          <h2>Döviz Kurları Dalgalı Seyrediyor</h2>
+          <p>USD/TRY paritesi politik belirsizlikler ve FED tutanakları öncesi 27,30 seviyesine kadar yükseldi.</p>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco5/400/200" alt="Kredi Notu">
+        <div class="card-content">
+          <h2>Uluslararası Kuruluş Türkiye’nin Notunu Revize Etti</h2>
+          <p>S&P, Türkiye’nin kredi notunu “BB-”den “BB” seviyesine düşürdü; görünüm ise “durağan” olarak korundu.</p>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco6/400/200" alt="Turizm Gelirleri">
+        <div class="card-content">
+          <h2>Turizm Gelirlerinde Rekor Artış</h2>
+          <p>Mayıs ayında turizm gelirleri geçen yılın aynı dönemine göre %45 artarak 5 milyar doları aştı.</p>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco7/400/200" alt="Dış Ticaret Açığı">
+        <div class="card-content">
+          <h2>Dış Ticaret Açığı Daraldı</h2>
+          <p>Ocak-Mayıs döneminde dış ticaret açığı %10 gerileyerek 60 milyar dolar oldu. İhracat artışı etkili.</p>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco8/400/200" alt="Enerji Fiyatları">
+        <div class="card-content">
+          <h2>Enerji Fiyatlarında Dalgalanma</h2>
+          <p>Petrol fiyatları jeopolitik gerilimlerle Brent varil fiyatını 80 doların üzerine taşıdı.</p>
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco9/400/200" alt="OECD Raporu">
+        <div class="card-content">
+          <h2>OECD’den Türkiye’ye Büyüme Uyarısı</h2>
+          <p>OECD raporunda Türkiye ekonomisinin yıl sonunda %3 büyüme kaydedeceği, enflasyon hedefinin zorlanacağı öngörüldü.</p>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/eco10/400/200" alt="Yabancı Yatırımlar">
+        <div class="card-content">
+          <h2>Doğrudan Yabancı Yatırımlar Artıyor</h2>
+          <p>Yılın ilk çeyreğinde doğrudan yabancı yatırımlar %25 artışla 6 milyar doları geçti, finansman kanalları çeşitleniyor.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Haber Sitesi
+  </footer>
+
+</body>
+</html>

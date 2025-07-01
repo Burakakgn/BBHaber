@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Siyaset Haberleri | Haber Sitesi</title>
+  <style>
+    :root {
+      --bg-dark: #1f1f1f;
+      --accent: #ff6f61;
+      --text-light: #e0e0e0;
+      --card-bg: #2a2a2a;
+      --shadow: rgba(0,0,0,0.4);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--bg-dark);
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      position: relative;
+      transition: color .3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: var(--accent);
+      transition: width .3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px var(--shadow);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h2 {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .card-content p {
+      margin-bottom: .75rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Siyaset</h1>
+    <nav>
+      <a href="hindex.html">Genel</a>
+      <a href="teknoloji.html">Teknoloji</a>
+      <a href="siyaset.html">Siyaset</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="spor.html">Spor</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="news-grid">
+      <!-- 1 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol1/400/200" alt="Ekonomi Paketi Görüşmeleri">
+        <div class="card-content">
+          <h2>TBMM’de Ekonomi Paketi Görüşmeleri</h2>
+          <p>Yeni paket kapsamındaki vergi indirimleri ve istihdam teşvikleri Meclis gündeminde. Muhalefet sosyal yardımların genişletilmesini öneriyor.</p>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol2/400/200" alt="AB Zirvesi Bildirisi">
+        <div class="card-content">
+          <h2>AB Zirvesi Ortak Bildirisi Yayımlandı</h2>
+          <p>Brüksel’de liderler iklim ve dijital dönüşümde iş birliği sözü verdi. Türkiye, göç ve enerji güvenliği maddelerini güçlendirdi.</p>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol3/400/200" alt="Yerel Seçim Stratejileri">
+        <div class="card-content">
+          <h2>Yerel Seçim Stratejileri Masaya Yatırıldı</h2>
+          <p>Partiler genç seçmen odaklı kampanyalar planlıyor. Sosyal medya ve saha raporları değerlendirildi, aday listeleri netleşiyor.</p>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol4/400/200" alt="Eğitim Reformu Tasarısı">
+        <div class="card-content">
+          <h2>Eğitim Reformu Tasarısı TBMM’ye Sunuldu</h2>
+          <p>Mesleki eğitime ağırlık veren tasarıda öğretmen atama kriterleri değişiyor. Komisyondan geçmesi iki ay sürmesi bekleniyor.</p>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol5/400/200" alt="Siber Güvenlik Kanunu">
+        <div class="card-content">
+          <h2>Siber Güvenlik Kanunu Kabul Edildi</h2>
+          <p>Kritik altyapılar tanımlandı, veri güvenliği zorunluluğu getirildi. Kanun üç ay içinde yürürlüğe giriyor.</p>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol6/400/200" alt="Göç Politikaları">
+        <div class="card-content">
+          <h2>Göç ve Mülteci Politikaları Yeniden Tartışılıyor</h2>
+          <p>Ortak komisyon kuruldu; AB fonlu entegrasyon projeleri masaya yatırıldı. Sınır güvenliği ve iltica başvuruları ele alındı.</p>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol7/400/200" alt="Enerji Verimliliği Yasası">
+        <div class="card-content">
+          <h2>Enerji Verimliliği Yasası Meclisten Geçti</h2>
+          <p>Zorunlu binalarda verimlilik standartları belirlendi. Yenilenebilir teşvikleriyle 2026’da yürürlüğe girecek.</p>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol8/400/200" alt="Sağlıkta Dijital Dönüşüm">
+        <div class="card-content">
+          <h2>Sağlıkta Dijital Dönüşüm Paketi Sunuldu</h2>
+          <p>Blokzincir tabanlı hasta kayıt sistemi ve tele-tıp hizmetleri tanıtıldı. Pilot uygulama 5 ilde başlıyor.</p>
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol9/400/200" alt="Kadına Şiddetle Mücadele">
+        <div class="card-content">
+          <h2>Kadına Yönelik Şiddetle Mücadele Ağı Kuruldu</h2>
+          <p>81 ilde erken uyarı sistemleri ve destek hatları 7/24 aktif olacak. STK’lar ve yerel yönetimler ortak çalışacak.</p>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="card">
+        <img src="https://picsum.photos/seed/pol10/400/200" alt="Dijital Vergilendirme">
+        <div class="card-content">
+          <h2>Dijital Vergilendirme Uzlaşısı Sağlandı</h2>
+          <p>Dijital hizmet sağlayıcılarının gelir paylaşımı ve şeffaf raporlama yükümlülüğü netleştirildi. Uluslararası platformlarda örnek gösteriliyor.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Haber Sitesi
+  </footer>
+
+</body>
+</html>
